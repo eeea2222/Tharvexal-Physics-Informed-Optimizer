@@ -21,7 +21,12 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
-from TharvexalPhysicsInformedOptimizerVsAdamVsSgdBenchmark import Tharvexal
+import importlib
+
+module = importlib.import_module(
+    "TharvexalPhysics-InformedOptimizerVsAdamVsSgdBenchmark"
+)
+Tharvexal = module.Tharvexal
 
 model = ...  # your PyTorch model
 optimizer = Tharvexal(
